@@ -5,6 +5,9 @@ Repository for the 2025 [Web Services and Applications](https://www.gmit.ie/comp
 
 The expected learning outcomes from this module are to:
 > *1. Describe common architectures of web services and web applications.*
+
 > *2. Create a simple web service.*
+
 > *3. Programmatically access a web service.*
+
 > *4. Construct a data set by querying a web service.*
