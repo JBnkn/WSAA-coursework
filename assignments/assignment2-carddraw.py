@@ -17,3 +17,27 @@ print(data2)
 
 with open ("assignment2-pokerhand.json", "w") as fp:
     json.dump(data2, fp)
+
+suit_counts = {}
+value_counts = {}
+
+for card in data2["cards"]:
+    suit = card["suit"]
+    value = card["value"]
+    suit_counts[suit] = suit_counts.get(suit, 0) + 1
+    value_counts[value] = value_counts.get(value, 0) + 1
+
+print(suit_counts)
+print(value_counts)
+
+for value, count in value_counts.items():
+    if count > 3:
+        print(f"Congratulations! Four of a kind: {value}s.")
+    elif count > 2:
+        print(f"Congratulations! Three of a kind: {value}s.")
+    elif count > 1:
+        print(f"Congratulations! A pair of {value}s.")
+
+for suit, count in suit_counts.items():
+    if count == 5:
+        print(f"Congratulations! A flush of {suit}.")
