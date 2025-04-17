@@ -3,12 +3,19 @@
 # the program should then replace all the instances of the text "Andrew" with your name
 # author: Joseph Benkanoun
 
+
 import requests
 from config import githubkey as cfg
 
-url = 'https://api.github.com/repos/JBnkn/misc/2025/contents/'
-filename = 'Andrew2Joseph.txt'
+url = 'https://api.github.com/repos/JBnkn/misc/contents/'
+filename = '2025/Andrew2Joseph.txt'
 
 key = cfg
 response = requests.get(url, auth = ('token', key))
 print(response.status_code)
+
+file = requests.get('https://github.com/JBnkn/misc/blob/main/Andrew2Joseph.txt')
+print(file)
+
+# struggling to get this to work
+# Python keeps returning an error when I try to pip install Github
