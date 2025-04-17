@@ -8,14 +8,14 @@ import requests
 from config import githubkey as cfg
 
 url = 'https://api.github.com/repos/JBnkn/misc/contents/'
-filename = '2025/Andrew2Joseph.txt'
 
 key = cfg
 response = requests.get(url, auth = ('token', key))
 print(response.status_code)
 
-file = requests.get('https://github.com/JBnkn/misc/blob/main/Andrew2Joseph.txt')
-print(file)
+file = requests.get('https://api.github.com/repos/JBnkn/misc/contents/Andrew2Joseph.txt', auth = ('token', key))
+content = file.json()
+print(content)
 
 # struggling to get this to work
 # Python keeps returning an error when I try to pip install Github
