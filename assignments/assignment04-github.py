@@ -3,3 +3,12 @@
 # the program should then replace all the instances of the text "Andrew" with your name
 # author: Joseph Benkanoun
 
+import requests
+from config import githubkey as cfg
+
+url = 'https://api.github.com/repos/JBnkn/misc/2025/contents/'
+filename = 'Andrew2Joseph.txt'
+
+key = cfg
+response = requests.get(url, auth = ('token', key))
+print(response.status_code)
