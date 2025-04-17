@@ -22,6 +22,7 @@ file_data = file.json()
 # asked for advice on my code from ChatGPT and it suggested using to return the file contents
 # I'm not fully getting this put unfortunately am flying out for Easter this morning so don't have time to continue tweaking
 # disappointed with this assignment - it just hasn't clicked for me
+# the below seems to have worked but I'd like to take more time to work through it and fully understand why it is working
 content_base64 = file_data['content']
 content = base64.b64decode(content_base64).decode('utf-8')
 
