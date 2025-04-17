@@ -19,7 +19,7 @@ print(file.status_code)
 
 file_data = file.json()
 
-# asked for advice on my code from ChatGPT and it suggested using to return the file contents
+# asked for advice on my code from ChatGPT and it suggested using Base64 to return the file contents
 # I'm not fully getting this put unfortunately am flying out for Easter this morning so don't have time to continue tweaking
 # disappointed with this assignment - it just hasn't clicked for me
 # the below seems to have worked but I'd like to take more time to work through it and fully understand why it is working
